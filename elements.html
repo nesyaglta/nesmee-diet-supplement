@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE57SD8GBD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YE57SD8GBD');
+</script>
   </head>
   <body class="is-preload">
 
@@ -52,7 +61,7 @@
           <!-- Form Pertanyaan -->
           <section>
             <h2>Formulir Pertanyaan</h2>
-            <form method="post" action="#">
+            <form id="formPertanyaan">
               <div class="row gtr-uniform">
                 <div class="col-6 col-12-xsmall">
                   <input type="text" name="nama" id="nama" placeholder="Nama Anda" required />
@@ -73,6 +82,38 @@
                   <ul class="actions">
                     <li><input type="submit" value="Kirim Pertanyaan" class="primary" /></li>
                     <li><input type="reset" value="Hapus" /></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </section>
+
+          <!-- Form Checkout -->
+          <section>
+            <h2>Checkout Produk</h2>
+            <form id="formCheckout">
+              <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                  <input type="text" name="namaCheckout" id="namaCheckout" placeholder="Nama Lengkap" required />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input type="text" name="alamat" id="alamat" placeholder="Alamat Pengiriman" required />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input type="number" name="jumlah" id="jumlah" placeholder="Jumlah Pesanan" min="1" required />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <select name="pembayaran" id="pembayaran" required>
+                    <option value="">Metode Pembayaran</option>
+                    <option value="transfer">Transfer Bank</option>
+                    <option value="cod">COD (Bayar di Tempat)</option>
+                    <option value="ewallet">E-Wallet (OVO, GoPay, DANA)</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <ul class="actions">
+                    <li><input type="submit" value="Checkout Sekarang" class="primary" /></li>
                   </ul>
                 </div>
               </div>
@@ -118,6 +159,23 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Popup JavaScript -->
+    <script>
+      // Popup saat kirim pertanyaan
+      document.getElementById("formPertanyaan").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Pesan Anda terkirim! Terima kasih telah menghubungi kami 😊");
+        this.reset();
+      });
+
+      // Popup saat checkout
+      document.getElementById("formCheckout").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Terima kasih! Pesanan Anda berhasil dan akan segera kami proses 💖");
+        this.reset();
+      });
+    </script>
 
   </body>
 </html>
