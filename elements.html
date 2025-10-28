@@ -1,126 +1,116 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Kirim Pertanyaan ke Penjual - NESMEÉ</title>
+    <title>Katalog & Checkout - NESMEÉ</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE57SD8GBD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YE57SD8GBD');
-</script>
+    <!-- Google Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE57SD8GBD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YE57SD8GBD');
+    </script>
   </head>
   <body class="is-preload">
 
     <!-- Wrapper -->
     <div id="wrapper">
 
-      <!-- Header -->
-      <header id="header">
-        <h1>Get in Touch</h1>
-        <p>Ajukan pertanyaan seputar produk suplemen diet NESMEÉ</p>
-      </header>
-
       <!-- Main -->
       <div id="main">
 
-        <!-- Content -->
-        <section id="content" class="main">
-          
-          <!-- Detail Produk -->
-          <section>
-            <h2>Detail Produk</h2>
-            <div class="box alt">
-              <div class="row gtr-uniform">
-                <div class="col-4 col-12-small">
-                  <span class="image fit"><img src="images/pict01.png" alt="Obat Diet NESMEÉ" /></span>
-                </div>
-                <div class="col-8 col-12-small">
-                  <h3>NESMEÉ Slim & Beauty Capsules.</h3>
-                  <p>
-                    Suplemen pelangsing alami yang diformulasikan dari bahan organik pilihan untuk membantu 
-                    membakar lemak, meningkatkan metabolisme, dan menjaga bentuk tubuh ideal tanpa efek samping.
-                  </p>
-                  <ul>
-                    <li>Isi: 30 kapsul</li>
-                    <li>Kandungan: L-Carnitine, Collagen Peptide, serta White Kidney Bean Extract.</li>
-                    <li>Aturan pakai: 2 kapsul per hari setelah makan</li>
-                    <li>Harga: Rp 299.000</li>
-                  </ul>
-                </div>
+        <!-- KATALOG PRODUK -->
+        <section id="katalog" class="main special">
+          <header class="major">
+            <h2>Etalase Produk NESMEÉ</h2>
+            <p>Pilih produk kecantikan favoritmu dan checkout langsung dari halaman ini 💖</p>
+          </header>
+
+          <ul class="features">
+            <li>
+              <span class="image fit"><img src="images/produk1.png" alt="NESMEÉ Slim & Beauty" /></span>
+              <h3>NESMEÉ Slim & Beauty Capsules</h3>
+              <p>30 kapsul pembakar lemak alami dengan L-Carnitine & Collagen Peptide.</p>
+              <p><b>Rp 299.000</b></p>
+              <button class="button primary pilih-produk" data-produk="NESMEÉ Slim & Beauty Capsules">Pilih Produk</button>
+            </li>
+
+            <li>
+              <span class="image fit"><img src="images/produk2.png" alt="NESMEÉ Whitening Plus" /></span>
+              <h3>NESMEÉ Whitening Plus</h3>
+              <p>Mencerahkan kulit dari dalam dengan Glutathione & Vitamin C alami.</p>
+              <p><b>Rp 279.000</b></p>
+              <button class="button primary pilih-produk" data-produk="NESMEÉ Whitening Plus">Pilih Produk</button>
+            </li>
+
+            <li>
+              <span class="image fit"><img src="images/produk3.png" alt="NESMEÉ Collagen Radiance" /></span>
+              <h3>NESMEÉ Collagen Radiance</h3>
+              <p>Menjaga elastisitas kulit dan mengurangi keriput dengan Collagen Peptide.</p>
+              <p><b>Rp 259.000</b></p>
+              <button class="button primary pilih-produk" data-produk="NESMEÉ Collagen Radiance">Pilih Produk</button>
+            </li>
+
+            <li>
+              <span class="image fit"><img src="images/produk4.png" alt="NESMEÉ Detox & Glow" /></span>
+              <h3>NESMEÉ Detox & Glow</h3>
+              <p>Membersihkan toksin tubuh dan membuat kulit tampak cerah alami.</p>
+              <p><b>Rp 249.000</b></p>
+              <button class="button primary pilih-produk" data-produk="NESMEÉ Detox & Glow">Pilih Produk</button>
+            </li>
+
+            <li>
+              <span class="image fit"><img src="images/produk5.png" alt="NESMEÉ Night Burn" /></span>
+              <h3>NESMEÉ Night Burn</h3>
+              <p>Pembakar lemak malam hari dengan formula gentle tanpa ganggu tidur.</p>
+              <p><b>Rp 289.000</b></p>
+              <button class="button primary pilih-produk" data-produk="NESMEÉ Night Burn">Pilih Produk</button>
+            </li>
+          </ul>
+        </section>
+
+        <!-- CHECKOUT FORM -->
+        <section id="checkout" class="main special">
+          <header class="major">
+            <h2>Checkout Produk</h2>
+            <p>Isi data lengkapmu untuk melanjutkan pemesanan 💕</p>
+          </header>
+
+          <form id="formCheckout">
+            <div class="row gtr-uniform">
+              <div class="col-12">
+                <input type="text" id="produkDipilih" name="produkDipilih" placeholder="Produk yang dipilih" readonly required />
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="text" name="namaCheckout" id="namaCheckout" placeholder="Nama Lengkap" required />
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="text" name="alamat" id="alamat" placeholder="Alamat Pengiriman" required />
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="number" name="jumlah" id="jumlah" placeholder="Jumlah Pesanan" min="1" required />
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <select name="pembayaran" id="pembayaran" required>
+                  <option value="">Metode Pembayaran</option>
+                  <option value="transfer">Transfer Bank</option>
+                  <option value="cod">COD (Bayar di Tempat)</option>
+                  <option value="ewallet">E-Wallet (OVO, GoPay, DANA)</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <ul class="actions special">
+                  <li><input type="submit" value="Checkout Sekarang" class="primary" /></li>
+                </ul>
               </div>
             </div>
-          </section>
-
-          <!-- Form Pertanyaan -->
-          <section>
-            <h2>Formulir Pertanyaan</h2>
-            <form id="formPertanyaan">
-              <div class="row gtr-uniform">
-                <div class="col-6 col-12-xsmall">
-                  <input type="text" name="nama" id="nama" placeholder="Nama Anda" required />
-                </div>
-                <div class="col-6 col-12-xsmall">
-                  <input type="email" name="email" id="email" placeholder="Email Anda" required />
-                </div>
-
-                <div class="col-12">
-                  <input type="text" name="produk" id="produk" value="NESMEÉ Slim & Beauty Capsules" readonly />
-                </div>
-
-                <div class="col-12">
-                  <textarea name="pesan" id="pesan" placeholder="Tulis pertanyaan Anda tentang produk ini..." rows="6" required></textarea>
-                </div>
-
-                <div class="col-12">
-                  <ul class="actions">
-                    <li><input type="submit" value="Kirim Pertanyaan" class="primary" /></li>
-                    <li><input type="reset" value="Hapus" /></li>
-                  </ul>
-                </div>
-              </div>
-            </form>
-          </section>
-
-          <!-- Form Checkout -->
-          <section>
-            <h2>Checkout Produk</h2>
-            <form id="formCheckout">
-              <div class="row gtr-uniform">
-                <div class="col-6 col-12-xsmall">
-                  <input type="text" name="namaCheckout" id="namaCheckout" placeholder="Nama Lengkap" required />
-                </div>
-                <div class="col-6 col-12-xsmall">
-                  <input type="text" name="alamat" id="alamat" placeholder="Alamat Pengiriman" required />
-                </div>
-                <div class="col-6 col-12-xsmall">
-                  <input type="number" name="jumlah" id="jumlah" placeholder="Jumlah Pesanan" min="1" required />
-                </div>
-                <div class="col-6 col-12-xsmall">
-                  <select name="pembayaran" id="pembayaran" required>
-                    <option value="">Metode Pembayaran</option>
-                    <option value="transfer">Transfer Bank</option>
-                    <option value="cod">COD (Bayar di Tempat)</option>
-                    <option value="ewallet">E-Wallet (OVO, GoPay, DANA)</option>
-                  </select>
-                </div>
-
-                <div class="col-12">
-                  <ul class="actions">
-                    <li><input type="submit" value="Checkout Sekarang" class="primary" /></li>
-                  </ul>
-                </div>
-              </div>
-            </form>
-          </section>
-
+          </form>
         </section>
+
       </div>
 
       <!-- Footer -->
@@ -162,18 +152,21 @@
 
     <!-- Popup JavaScript -->
     <script>
-      // Popup saat kirim pertanyaan
-      document.getElementById("formPertanyaan").addEventListener("submit", function(e) {
-        e.preventDefault();
-        alert("Pesan Anda terkirim! Terima kasih telah menghubungi kami 😊");
-        this.reset();
+      // Isi otomatis nama produk ke form checkout
+      document.querySelectorAll(".pilih-produk").forEach(button => {
+        button.addEventListener("click", () => {
+          const namaProduk = button.getAttribute("data-produk");
+          document.getElementById("produkDipilih").value = namaProduk;
+          window.scrollTo({ top: document.getElementById("checkout").offsetTop, behavior: "smooth" });
+        });
       });
 
       // Popup saat checkout
       document.getElementById("formCheckout").addEventListener("submit", function(e) {
         e.preventDefault();
-        alert("Terima kasih! Pesanan Anda berhasil dan akan segera kami proses 💖");
+        alert("Terima kasih! Pesanan Anda berhasil diproses 💖\nKami akan segera menghubungi Anda untuk konfirmasi pengiriman.");
         this.reset();
+        document.getElementById("produkDipilih").value = "";
       });
     </script>
 
