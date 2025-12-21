@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nesyaglta.github.io/nesmee-diet-supplement/sitemap.xml
